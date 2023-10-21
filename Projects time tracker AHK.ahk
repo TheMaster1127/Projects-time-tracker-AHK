@@ -83,8 +83,8 @@ isRunning := 0
 GuiControl, Enable, Start
 GuiControl, Enable, Save
 GuiControl, Disable, Stop
-GuiControl, Show, Save
-GuiControl, Enable, Save
+GuiControl, Hide, Save
+GuiControl, Disable, Save
 SetTimer, Time, Off
 
 if (A_Hour >= 13)
