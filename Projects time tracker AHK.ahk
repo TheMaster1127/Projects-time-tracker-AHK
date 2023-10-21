@@ -63,6 +63,7 @@ Return
 
 
 Start:
+isRunning := 1
 GuiControl, Enable, Stop
 GuiControl, Disable, Start
 SetTimer, Time, 1
@@ -81,6 +82,7 @@ StartTimee := AHour . ":" . A_Min . " " . ampm
 Return
 
 Stop:
+isRunning := 0
 GuiControl, Enable, Start
 GuiControl, Enable, Save
 GuiControl, Disable, Stop
@@ -149,10 +151,13 @@ Return
 
 
 GuiClose:
+if (isRunning = 1)
+{
 gosub Stop
 Sleep, 100
 gosub Save
 Sleep, 100
+}
 ExitApp
 Return
 
