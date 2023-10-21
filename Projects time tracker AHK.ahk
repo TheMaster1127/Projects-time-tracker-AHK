@@ -4,13 +4,12 @@
 ; Projects time tracker AHK
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
+; A lightweight AutoHotkey script to track the time spent on your projects.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #singleinstance force
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;;;;;;;;;;;;;;;;;;;;;
-
 
 Gui, Color, 121212
 Gui -DPIScale
@@ -57,10 +56,8 @@ Return
 
 Save:
 GuiControl, Hide, Stop
-
 FileAppend, The duration of that session between %StartTimee% and %EndTime% is %ElapsedTime123%`n, %OutputVar%\Project Time.txt
 Return
-
 
 Start:
 isRunning := 1
@@ -90,7 +87,6 @@ GuiControl, Show, Save
 GuiControl, Enable, Save
 SetTimer, Time, Off
 
-
 if (A_Hour >= 13)
 {
 AHour := A_Hour - 12
@@ -105,8 +101,6 @@ EndTime := AHour . ":" . A_Min . " " . ampm
 
 
 ElapsedTime := A_TickCount - StartTime
-
-
 ms := ElapsedTime
 
 ; Calculate the components
@@ -120,16 +114,10 @@ milliseconds := Mod(ms, 1000)
 ; Display the result
 ElapsedTime123 := ""
 ElapsedTime123 .= hours " hours " minutes " minutes " seconds " seconds and " milliseconds " ms."
-
-
 Return
-
-
 
 Time:
 ElapsedTime := A_TickCount - StartTime
-
-
 ms := ElapsedTime
 
 ; Calculate the components
@@ -147,9 +135,6 @@ ElapsedTime123 .= hours "h " minutes "m " seconds "s " milliseconds "ms"
 GuiControl, , Time, Time: %ElapsedTime123%
 Return
 
-
-
-
 GuiClose:
 if (isRunning = 1)
 {
@@ -160,10 +145,3 @@ Sleep, 100
 }
 ExitApp
 Return
-
-
-
-
-
-
-
