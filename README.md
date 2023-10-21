@@ -17,6 +17,12 @@ The "Projects Time Tracker AHK" is an AutoHotkey (AHK) script designed to help y
 5. The elapsed time will be displayed in the GUI.
 6. Click the "Save" button to save the session's details in a text file within the project folder.
 
+## Graceful Exit
+When you're done using the "Projects Time Tracker AHK" and decide to close the application, the script will ensure that your tracked time data is not lost. Here's what happens when you close the application:
+- It stops the timer.
+- It saves the session's duration and time period to a text file within the project folder.
+- The application will exit gracefully, preventing accidental closure and data loss.
+
 ## Example
 Suppose you're working on a project, and you want to track your work session's time duration. You can follow these steps:
 
@@ -26,4 +32,3 @@ Suppose you're working on a project, and you want to track your work session's t
 4. Click the "Stop" button when you finish your work session.
 5. The elapsed time will be displayed in the GUI.
 6. Click the "Save" button to save the session's details in a text file within the project folder.
-
