@@ -17,8 +17,10 @@ Gui, Font, s15
 Gui, Add, Text, cWhite x0 y10 w1000 h30 center, Track your time for a project
 Gui, Add, Button, x10 y80 h50 gButton, Select your project
 Gui, Add, Text, cWhite x10 w1000 y550 h100 vTextSelectedFolder,
-Gui, Add, Button, x10 y150 w150 h50 vStart gStart, Start
-Gui, Add, Button, x10 y210 w150 h50 vStop gStop, Stop
+Gui, Font, s13
+Gui, Add, Button, x10 y150 w150 h50 vStart gStart, Start/Resume
+Gui, Font, s15
+Gui, Add, Button, x10 y210 w150 h50 vStop gStop, Stop/Pause
 Gui, Add, Button, x10 y270 w150 h50 vReset gReset, Reset
 Gui, Add, Text, cWhite x10 y350 w350 h50 vTime,
 Gui, Add, Button, x10 y410 w150 h50 vSave gSave, Save
