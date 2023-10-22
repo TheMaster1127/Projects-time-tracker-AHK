@@ -1,34 +1,29 @@
 # Projects Time Tracker AHK
 
-## Overview
-The "Projects Time Tracker AHK" is an AutoHotkey (AHK) script designed to help you track the time you spend on various projects. This lightweight tool provides a convenient way to record and save the duration of your work sessions.
+A lightweight AutoHotkey script to track the time spent on your projects.
 
 ## Features
-- Select your project folder: Choose the directory where your project files are located.
-- Start timer: Begin tracking the time when you start working on your project.
-- Stop timer: Pause the timer when you finish your work session.
-- Save session details: Save the session's duration and time period in a text file.
 
-## Usage
+- Track your time for a project with ease.
+- Start, pause, and stop tracking at your convenience.
+- Save session data to a text file.
+- Simple and intuitive user interface.
+
+## Requirements
+
+- AutoHotkey: You need AutoHotkey v1.1 installed to run this script.
+
+## How to Use
+
 1. Run the script.
-2. Click the "Select your project" button to choose the folder associated with your project.
-3. Click the "Start" button to initiate the timer when you begin working.
-4. Click the "Stop" button when you finish your work session.
-5. The elapsed time will be displayed in the GUI.
-6. Click the "Save" button to save the session's details in a text file within the project folder.
+2. Click the "Select your project" button to choose a folder for your project.
+3. Click the "Start/Resume" button to begin tracking time.
+4. Click the "Stop/Pause" button to pause tracking.
+5. Click the "Save" button to save the session data.
+6. To reset the timer, click the "Reset" button.
 
-## Graceful Exit
-When you're done using the "Projects Time Tracker AHK" and decide to close the application, the script will ensure that your tracked time data is not lost. Here's what happens when you close the application:
-- It stops the timer.
-- It saves the session's duration and time period to a text file within the project folder.
-- The application will exit gracefully, preventing accidental closure and data loss.
+## Important Notes
 
-## Example
-Suppose you're working on a project, and you want to track your work session's time duration. You can follow these steps:
-
-1. Run the "Projects Time Tracker AHK" script.
-2. Select the folder where your project files are stored.
-3. Click the "Start" button when you start working on your project.
-4. Click the "Stop" button when you finish your work session.
-5. The elapsed time will be displayed in the GUI.
-6. Click the "Save" button to save the session's details in a text file within the project folder.
+- When you select a folder for your project, the script will track the time spent on that project.
+- You can pause and resume the timer as needed.
+- The session data, including start and end times, is saved to a text file in your selected project folder.
