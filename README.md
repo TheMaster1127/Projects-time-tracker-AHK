@@ -11,7 +11,8 @@ A lightweight AutoHotkey script to track the time spent on your projects.
 
 ## Requirements
 
-- AutoHotkey: You need AutoHotkey v1.1 installed to run this script.
+- AutoHotkey: You need AutoHotkey v1.1 installed to run the ahk script.
+- But you dont need any requirements to run the exe file since it will work on any Windows machine.
 
 ## How to Use
 
