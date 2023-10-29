@@ -16,12 +16,12 @@ A lightweight AutoHotkey script to track the time spent on your projects.
 
 ## How to Use
 
-1. Run the script.
-2. Click the "Select your project" button to choose a folder for your project.
-3. Click the "Start/Resume" button to begin tracking time.
-4. Click the "Stop/Pause" button to pause tracking.
-5. Click the "Save" button to save the session data. AND RESRET THE TIMER!
-6. To reset the timer, click the "Reset" button.
+1. Run the script or the exe file.
+3. Click the "Select your project" button to choose a folder for your project.
+4. Click the "Start/Resume" button to begin tracking time.
+5. Click the "Stop/Pause" button to pause tracking.
+6. Click the "Save" button to save the session data. AND RESRET THE TIMER!
+7. To reset the timer, click the "Reset" button.
 
 ## Important Notes
 
