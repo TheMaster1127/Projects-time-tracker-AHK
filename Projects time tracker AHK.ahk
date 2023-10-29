@@ -63,6 +63,7 @@ Return
 Save:
 isRunning := 1
 GuiControl, Disable, Stop
+GuiControl, Disable, Save
 FileAppend, The duration of that session between %StartTimee% and %EndTime% is %ElapsedTime123%`n, %OutputVar%\Project Time.txt
 MsgBox, The duration of that session between %StartTimee% and %EndTime% is %ElapsedTime123%`n, %OutputVar%\Project Time.txt
 gosub Reset
@@ -76,6 +77,8 @@ StartTime := A_TickCount
 isRunning := 1
 GuiControl, Enable, Stop
 GuiControl, Disable, Start
+GuiControl, Disable, Save
+GuiControl, Disable, Reset
 SetTimer, Time, 1
 
 if (A_Hour >= 13)
