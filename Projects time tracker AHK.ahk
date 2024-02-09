@@ -11,6 +11,8 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;;;;;;;;;;;;;;;;;;;;;
 
+storeElapsedTime := 0
+
 Gui, Color, 121212
 Gui -DPIScale
 Gui, Font, s15
@@ -74,6 +76,7 @@ if (isRunning != 1)
 {
 StartTime := A_TickCount
 }
+StartTime := A_TickCount - storeElapsedTime
 isRunning := 1
 GuiControl, Enable, Stop
 GuiControl, Disable, Start
@@ -102,7 +105,8 @@ GuiControl, Disable, Stop
 GuiControl, Show, Save
 GuiControl, Enable, Save
 SetTimer, Time, Off
-
+storeElapsedTime := A_TickCount - StartTime
+ElapsedTime := A_TickCount - StartTime
 if (A_Hour >= 13)
 {
 AHour := A_Hour - 12
@@ -116,7 +120,7 @@ ampm := "AM"
 EndTime := AHour . ":" . A_Min . " " . ampm
 
 
-ElapsedTime := A_TickCount - StartTime
+
 ms := ElapsedTime
 
 ; Calculate the components
@@ -135,6 +139,7 @@ Return
 
 Reset:
 isRunning := 0
+storeElapsedTime := 0
 GuiControl, Enable, Start
 GuiControl, Disable, Stop
 SetTimer, Time, Off
