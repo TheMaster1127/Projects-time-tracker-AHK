@@ -75,14 +75,6 @@ Start:
 if (isRunning != 1)
 {
 StartTime := A_TickCount
-}
-StartTime := A_TickCount - storeElapsedTime
-isRunning := 1
-GuiControl, Enable, Stop
-GuiControl, Disable, Start
-GuiControl, Disable, Save
-GuiControl, Disable, Reset
-SetTimer, Time, 1
 
 if (A_Hour >= 13)
 {
@@ -95,6 +87,17 @@ AHour := A_Hour
 ampm := "AM"
 }
 StartTimee := AHour . ":" . A_Min . " " . ampm
+
+}
+StartTime := A_TickCount - storeElapsedTime
+isRunning := 1
+GuiControl, Enable, Stop
+GuiControl, Disable, Start
+GuiControl, Disable, Save
+GuiControl, Disable, Reset
+SetTimer, Time, 1
+
+
 Return
 
 Stop:
